@@ -30,3 +30,7 @@ require_once( LILPATH . '/post-types/register.php' );
 
 add_action( 'init', 'lil_register_business_type' );
 add_action( 'init', 'lil_register_event_type' );
+
+require_once( LILPATH . '/taxonomies/register.php' );
+
+add_action( 'init', 'lil_register_size_taxonomy' );
