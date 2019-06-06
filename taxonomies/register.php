@@ -34,11 +34,11 @@ function lil_register_location_taxonomy() {
 		'show_in_quick_edit' => true,
 		'show_in_rest' => true,
 		'hierarchical' => true,
-		'rewrites' => array( 'hierarchical' => true ),
+		'rewrites' => array( 'hierarchical' => true, 'has_front' => true ),
 	);
 
 	$post_types = array( 'business', 'event' );
 
-	register_taxonomy( 'size', $post_types, $args );
+	register_taxonomy( 'location', $post_types, $args );
 
 }
