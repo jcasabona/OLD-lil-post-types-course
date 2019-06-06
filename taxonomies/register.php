@@ -3,6 +3,7 @@ function lil_register_size_taxonomy() {
 	$labels = array(
 		'name' => __( 'Sizes', LILDOMAIN ),
 		'singular_name' => __( 'Size', LILDOMAIN ),
+		'add_new_item' => __( 'Add New Size', LILDOMAIN ),
 	);
 
 	$args = array( 
