@@ -34,3 +34,4 @@ add_action( 'init', 'lil_register_event_type' );
 require_once( LILPATH . '/taxonomies/register.php' );
 
 add_action( 'init', 'lil_register_size_taxonomy' );
+add_action( 'init', 'lil_register_location_taxonomy' );
