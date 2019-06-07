@@ -9,9 +9,11 @@ function lil_child_enqueue_styles() {
     );
 }
 
+
+add_action( 'pre_get_posts', 'lil_add_business_to_main_query' );
+
 function lil_add_business_to_main_query( $query ) {
     if ( $query->is_home() && $query->is_main_query() ) {
         $query->set( 'post_type', array('post', 'business') );
     }
 }
-add_action( 'pre_get_posts', 'lil_add_business_to_main_query' );
