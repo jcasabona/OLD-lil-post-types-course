@@ -17,3 +17,14 @@ function lil_add_business_to_main_query( $query ) {
         $query->set( 'post_type', array('post', 'business') );
     }
 }
+
+function lil_show_events( $terms ) {
+	$events = new WP_Query( array(
+		'post_type' => 'event',
+		'posts_per_page' => 3,
+		'orderby' => 'title',
+	) );
+
+	
+	wp_reset_query(); 
+}
