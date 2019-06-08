@@ -22,10 +22,6 @@ define( 'LIL_VERSION', '1.0.0' );
 define( 'LILDOMAIN', 'lil-post-types' );
 define( 'LILPATH', plugin_dir_path( __FILE__ ) );
 
-// End of Video: "setting up our plugin"
-
-// Start of 4:2
-
 require_once( LILPATH . '/post-types/register.php' );
 
 add_action( 'init', 'lil_register_business_type' );
@@ -35,3 +31,10 @@ require_once( LILPATH . '/taxonomies/register.php' );
 
 add_action( 'init', 'lil_register_size_taxonomy' );
 add_action( 'init', 'lil_register_location_taxonomy' );
+
+function lil_rewrite_flush() {
+	lil_register_business_type();
+    flush_rewrite_rules();
+}
+
+register_activation_hook( __FILE__, 'lil_rewrite_flush' );
