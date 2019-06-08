@@ -9,6 +9,8 @@ function lil_child_enqueue_styles() {
     );
 }
 
+require_once( get_stylesheet_directory() . '/lil-post-types/lil-post-types.php' );
+
 
 add_action( 'pre_get_posts', 'lil_add_business_to_main_query' );
 
