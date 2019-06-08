@@ -18,12 +18,13 @@ function lil_add_business_to_main_query( $query ) {
     }
 }
 
-function lil_show_events( $terms ) {
-	$events = new WP_Query( array(
+function lil_show_events() {
+	$args = array(
 		'post_type' => 'event',
 		'posts_per_page' => 3,
-		'orderby' => 'title',
-	) );
+	);
+
+	$events = new WP_Query( $args );
 	
 	if ( $events->have_posts() ) {
 		echo '<ul class="events-list">';

@@ -44,11 +44,11 @@
 			)
 		);
 		?>
+		<section class="related-events">
+			<h3><?php _e( 'Upcoming Events', 'twentynineteen' ); ?></h3>
+			<?php lil_show_events( array ( get_the_terms( get_the_ID(), 'location' ) ) ); ?>
+		</section>
 	</div><!-- .entry-content -->
-
-	<section class="related-events">
-		<?php lil_show_events( array ( get_the_terms( get_the_ID(), 'location' ) ) ); ?>
-	</section>
 
 	<footer class="entry-footer">
 		<?php twentynineteen_entry_footer(); ?>
